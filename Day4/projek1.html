@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <style>
+        body {
+            font-family:C Arial, sans-serif;
+        }
+        .profile-container {
+            margin-top: 50px;
+        }
+        .image-container {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .change-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Warna latar belakang default */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s; /* Transisi warna latar belakang */
+        }
+        .change-btn:hover {
+            background-color: #45a049; /* Warna latar belakang saat tombol dihover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <h1>Nama: RAMADHANI HERFIN </h1>
+    <h2>NIM: 12250112779 </h2>
+    <h3>Quiz 1</h3>
+    <div class="image-container">
+        <img src="hp1.png" alt="Profil Picture 1">
+        <br>
+        <button class="change-btn" onclick="changeBackgroundColor(1)">Ubah Warna Background</button>
+    </div>
+    <div class="image-container">
+        <img src="hp2.png" alt="Profil Picture 2">
+        <br>
+        <button class="change-btn" onclick="changeBackgroundColor(2)">Ubah Warna Background</button>
+    </div>
+    <div class="image-container">
+        <img src="laptop.jpg" alt="Profil Picture 3">
+        <br>
+        <button class="change-btn" onclick="changeBackgroundColor(3)">Ubah Warna Background</button>
+    </div>
+</div>
+
+<script>
+    function changeBackgroundColor(imageNumber) {
+        var body = document.body;
+        body.style.backgroundColor = getRandomColor(); // Mengubah warna background menjadi warna acak
+    }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
+
+</body>
+</html>
